@@ -1,0 +1,329 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ *
+ * Each colors have exact same color scale system with 3 levels of solid
+ * colors with different brightness, and 1 soft color.
+ *
+ * - `XXX-1`: The most solid color used mainly for colored text. It must
+ *   satisfy the contrast ratio against when used on top of `XXX-soft`.
+ *
+ * - `XXX-2`: The color used mainly for hover state of the button.
+ *
+ * - `XXX-3`: The color for solid background, such as bg color of the button.
+ *   It must satisfy the contrast ratio with pure white (#ffffff) text on
+ *   top of it.
+ *
+ * - `XXX-soft`: The color used for subtle background such as custom container
+ *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
+ *   on top of it.
+ *
+ * - `default`: The color used purely for subtle indication without any
+ *   special meanings attached to it such as bg color for menu hover state.
+ *
+ * - `brand`: Used for primary brand colors, such as link text, button with
+ *   brand theme, etc.
+ *
+ * - `tip`: Used to indicate useful information. The default theme uses the
+ *   brand color for this by default.
+ *
+ * - `warning`: Used to indicate warning to the users. Used in custom
+ *   container, badges, etc.
+ *
+ * - `danger`: Used to show error, or dangerous message to the users. Used
+ *   in custom container, badges, etc.
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  --vp-c-brand-1: var(--vp-c-indigo-1);
+  --vp-c-brand-2: var(--vp-c-indigo-2);
+  --vp-c-brand-3: var(--vp-c-indigo-3);
+  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* 「参加登録」ボタンの背景色 */
+  --vp-home-hero-name-background: #3451b2;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/* Home（index.md）だけ検索フォームを非表示にする */
+body:has(.VPHome) .VPNavBarSearch.search {
+  display: none !important;
+}
+
+/* 検索ボタンの「Ctrl K」キー表示を消す */
+/* .DocSearch-Button-Keys {
+  display: none !important;
+} */
+
+/* 検索ボタンの幅を調整 */
+/* .VPNavBarSearch .DocSearch-Button {
+  width: 300px;
+  justify-content: flex-start;
+} */
+
+/**
+ * Hero Area
+ * -------------------------------------------------------------------------- */
+
+.home-hero-background {
+  background-image: url("./images/crystal.jpg"); /* https://www.photo-ac.com/main/detail/27752540 */
+  background-size: cover;
+  background-position: left 80%;
+  padding-bottom: 48px;
+  margin-bottom: -48px;
+}
+
+.dark .home-hero-background::before{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+
+/* 横幅が1080px以上の時 */
+@media (min-width: 1080px) {
+  :root {
+    /* index.mdのheroのnameのテキスト色 */
+    --vp-home-hero-name-background: #3451b2;
+    /* --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(45deg, #007CDC, #058BB3, #3451b2); */
+  }
+  /* index.htmlのhero内のtextの色 */
+  .VPHero.VPHomeHero .heading {
+    color: var(--vp-c-text-1);
+  }
+  /* index.htmlのhero内のtaglineについて */
+  .VPHero.VPHomeHero .tagline {
+    /* テキスト色 */
+    color: var(--vp-c-text-2);
+    /* フォントの太さを変更 */
+    /* font-weight: bold; */
+    /* フォントを変えたい際にはfont-familyで指定 */
+  }
+}
+
+/* 横幅が1080px未満の時 */
+@media (max-width: 1080px) {
+  :root {
+    /* index.mdのheroのnameのテキスト色 */
+    --vp-home-hero-name-color: transparent;
+    /* transparentのとき、背景色を透過 */
+    --vp-home-hero-name-background: -webkit-linear-gradient(45deg, #7AD3EC, #C0ECE1);
+  }
+  /* index.htmlのhero内のtextの色 */
+  .VPHero.VPHomeHero .heading {
+    color: var(--vp-c-gray-1);
+  }
+  /* index.htmlのhero内のtaglineについて */
+  .VPHero.VPHomeHero .tagline {
+    /* テキスト色 */
+    color: var(--vp-c-gray-2);
+    /* フォントの太さを変更 */
+    /* font-weight: bold; */
+    /* フォントを変えたい際にはfont-familyで指定 */
+  }
+}
+
+/* 横幅が1080px以上の時 */
+@media (min-width: 1080px) {
+  .dark:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(45deg, #7AD3EC, #C0ECE1);
+  }
+}
+
+/* ダークモードの時のtext, taglineの色を一括で変更 */
+.dark .VPHero.VPHomeHero .heading span.name.clip,
+.dark .VPHero.VPHomeHero .heading,
+.dark .VPHero.VPHomeHero .tagline {
+  color: var(--vp-c-text-1);
+}
+
+/* ライトモードの時のfeaturesの背景 */
+.home-hero-background .VPFeature {
+  background-color: rgba(246, 246, 247, 0.93);
+}
+
+/* ダークモードの時のfeaturesの背景 */
+.dark .home-hero-background .VPFeature {
+  background-color: rgba(27, 27, 31, 0.93);
+}
+
+.VPNavBar.home.top .title,
+.VPNavBar.home.top .VPLink.link.VPNavBarMenuLink ,
+.VPNavBar.home.top .VPFlyout .button .text,
+.VPNavBar.home.top .VPLink.link.vp-external-link-icon.VPNavBarMenuLink::after,
+.VPNavBar.home.top .vpi-more-horizontal.icon,
+.VPNavBar.home.top .VPNavBarHamburger.hamburger {
+  /* ライトモードの上部メニューの色 */
+  color: var(--vp-c-gray-2);
+  /* fontの太さ */
+  /* font-weight: bold; */
+}
+
+/* 横幅が1080px未満の時 */
+@media (min-width: 1280px) {
+  .VPNavBar.home.top .VPSocialLinks .VPNavBarSocialLinks .social-links,
+  .VPNavBar.home.top .VPSocialLink {
+    color: var(--vp-c-gray-2);
+  }
+}
+
+.dark .VPNavBar.home.top .title,
+.dark .VPNavBar.home.top .VPLink.link.VPNavBarMenuLink ,
+.dark .VPNavBar.home.top .VPFlyout .button .text,
+.dark .VPNavBar.home.top .VPLink.link.vp-external-link-icon.VPNavBarMenuLink::after,
+.dark .VPNavBar.home.top .vpi-more-horizontal.icon,
+.dark .VPNavBar.home.top .VPNavBarHamburger.hamburger,
+.dark .VPNavBar.home.top .VPSocialLinks .VPNavBarSocialLinks .social-links,
+.dark .VPNavBar.home.top .VPSocialLink {
+  /* ダークモードの上部メニューの色 */
+  color: #dfdfd6;
+}
+
+.VPNavBar.home.top.screen-open .title,
+.VPNavBar.home.top.screen-open .VPLink.link.VPNavBarMenuLink ,
+.VPNavBar.home.top.screen-open .VPFlyout .button .text,
+.VPNavBar.home.top.screen-open .VPLink.link.vp-external-link-icon.VPNavBarMenuLink::after,
+.VPNavBar.home.top.screen-open .vpi-more-horizontal.icon,
+.VPNavBar.home.top.screen-open .VPNavBarHamburger.hamburger,
+.VPNavBar.home.top.screen-open .VPSocialLinks .VPNavBarSocialLinks .social-links,
+.VPNavBar.home.top.screen-open .VPSocialLink {
+  color: var(--vp-c-text-1);
+}
+
+.VPNavBar.home.top .VPNavBarAppearance::before,
+.VPNavBar.home.top .VPSocialLinks.VPNavBarSocialLinks.social-links::before {
+  background-color: #dfdfd6;
+}
+
+.dark .VPNavBar.home.top .VPNavBarAppearance::before,
+.dark .VPNavBar.home.top .VPSocialLinks.VPNavBarSocialLinks.social-links::before {
+  background-color: #dfdfd6;
+}
+
+.VPNavBar.home.top.screen-open .VPNavBarAppearance::before,
+.VPNavBar.home.top.screen-open .VPSocialLinks.VPNavBarSocialLinks.social-links::before {
+  color: red;
+}
+
+/* index.mdのスポンサーバナー用 */
+.sponsor-fixed-banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5%;
+}
+
+.sponsor-fixed-banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 235px;
+  height: 70px;
+  background-color: #FFFFFF; /* 背景色を白に設定 */
+}
+.sponsor-fixed-banner img {
+  flex: 1 1 150px; /* 最小幅150px アス比固定 */
+  max-width: 235px;
+  max-height: 70px;
+  height: auto;
+  object-fit: contain;
+  padding: 15px;
+}
+
+.sponsor-fixed-banner .compphys {
+  /* 他のロゴとサイズを合わせる */
+  width: 235px;
+  height: 70px;
+}
+
+.sponsor-fixed-banner .pfn-logo {
+  /* https://www.preferred.jp/ja/company/logo/ */
+  padding-right: 30px;
+}
+
+/* 共催・後援用 改行について */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}

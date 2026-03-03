@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "NODE_OPTIONS=--max-old-space-size=8192 vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
