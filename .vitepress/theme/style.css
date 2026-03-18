@@ -327,3 +327,18 @@ body:has(.VPHome) .VPNavBarSearch.search {
     display: none !important;
   }
 }
+
+/* ライトモードでも hero の title / description を白にする */
+html:not(.dark) .VPHero.VPHomeHero .heading span.name,
+html:not(.dark) .VPHero.VPHomeHero .heading span.name.clip,
+html:not(.dark) .VPHero.VPHomeHero .heading,
+html:not(.dark) .VPHero.VPHomeHero .tagline {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+}
+
+/* name に設定されている背景色・グラデーションを無効化 */
+html:not(.dark) {
+  --vp-home-hero-name-color: #fff;
+  --vp-home-hero-name-background: none;
+}
