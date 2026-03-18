@@ -22,7 +22,7 @@ export default defineConfig({
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-M4Z2H3LQ');`
+      })(window,document,'script','dataLayer','GTM-P94M7K39');`
     ],
 
     ["link", { rel: "icon", href: "https://rd070672.github.io/antimeron/images/favicon.png" }],
@@ -31,13 +31,13 @@ export default defineConfig({
       href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css'
     }],
 
-    ["meta", { property: "og:image", content: "https://rd070672.github.io/antimeron/images/top.jpg" }],
+    ["meta", { property: "og:image", content: "https://rd070672.github.io/antimeron/images/bg.jpg" }],
     ["meta", { property: "og:site_name", content: "antimeron" }],
-    ["meta", { property: "twitter:card", content: "summary" }],
-    ["meta", { property: "twitter:site", content: "@antimeron"}],
-    ["meta", { property: "twitter:title", content: "antimeron"}],
-    ["meta", { property: "twitter:description", content: "antimeronの研究取り組みからの知見や経験をwikiとして共有します"}],
-    ["meta", { property: "twitter:image", content: "https://rd070672.github.io/antimeron/images/top.jpg" }]
+    // ["meta", { property: "twitter:card", content: "summary" }],
+    // ["meta", { property: "twitter:site", content: "@antimeron"}],
+    // ["meta", { property: "twitter:title", content: "antimeron"}],
+    // ["meta", { property: "twitter:description", content: "antimeronの研究取り組みからの知見や経験をwikiとして共有します"}],
+    // ["meta", { property: "twitter:image", content: "https://rd070672.github.io/antimeron/images/top.jpg" }]
   ],
 
   // https://vitepress.dev/reference/default-theme-config
