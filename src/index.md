@@ -27,7 +27,7 @@ features:
 
 ---
 
-## 最近追加した項目（2026-1）
+## 最近追加した項目-1（2026）
 - [Neural Entropyによる深層学習モデル評価](data/neural-entropy)
 - [Industry 5.0の動向と展望](other/industry5)
 - [横浜の歴史を学術的にたどる](other/yokohama)
@@ -37,7 +37,7 @@ features:
 - [スピントロニクス半導体](exp/semiconductor-spintronics)
 - [計算科学のための大規模数値解法](other/lecture-large-scale-computing)
 
-## 最近追加した項目（2025-12）
+## 最近追加した項目-2（2025）
 - [完全磁気多極子基底とMCD/MLD総和則](exp/mcd-mld-dipole-sum-rule)
 - [オシロスコープと電流プローブを用いた損失評価法](exp/osciloscope-measurement)
 - [BHアナライザによる損失評価法](exp/b-h-analyzer)
@@ -65,7 +65,7 @@ features:
 - [材料工学の中で、物性物理を掘り下げる](other/essay-solid-state-physics)
 - [理学から工学へ、工学から社会へ](other/essay-science-engineering)
 
-## 最近追加した項目（2025-11）
+## 最近追加した項目-1（2025）
 - [四重極応答と磁気弾性](calc/quadrupole)
 - [四重極応答理論](calc/quadrupole-theory)
 - [四重極子モーメントと磁歪の統一的記述](calc/quadrupole-maelas)
