@@ -27,6 +27,9 @@ features:
 
 ---
 
+## 最近追加した項目-2（2026）
+- [カルマンフィルタ](data/kalman-filter)
+
 ## 最近追加した項目-1（2026）
 - [Neural Entropyによる深層学習モデル評価](data/neural-entropy)
 - [Industry 5.0の動向と展望](other/industry5)
