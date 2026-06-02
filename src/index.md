@@ -29,6 +29,8 @@ features:
 
 ## 最近追加した項目-2（2026）
 - [カルマンフィルタ](data/kalman-filter)
+- [マテリアルズ・インフォマティクス](data/materials-informatics)
+- [解析学](data/analysis)
 
 ## 最近追加した項目-1（2026）
 - [Neural Entropyによる深層学習モデル評価](data/neural-entropy)
